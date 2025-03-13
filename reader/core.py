@@ -1,6 +1,7 @@
 import random
 import math
 
+
 def __init__(self, length, digit, password=''):
      self.length = length
      self.digit = digit
@@ -31,6 +32,26 @@ def  parameters():
     pass
 
 #scrambles a given string
+
+def scramble(string):
+    pass
+
+#does a cesar cipher on a string
+def caesar_cipher(self, shift: int):
+    if not (1 <= shift <= 25):
+        raise ValueError("Shift value must be between 1 and 25.")
+
+    def shift_letter(char, shift):
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            return chr((ord(char) - base + shift) % 26 + base)
+        return char
+
+    self.password = ''.join(shift_letter(char, shift) for char in self.password)
+
+
+
+
 def scramble(self, string):
     toList = [chr for chr in string]
     print(toList)
@@ -42,9 +63,8 @@ def scramble(self, string):
     self.password = retString
 
 
-#does a cesar cipher on a string
-def cesar_cipher(string):
-    pass
+
+
 
  #returns the current password
 def retPassword():
