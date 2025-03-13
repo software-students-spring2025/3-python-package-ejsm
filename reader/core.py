@@ -1,3 +1,7 @@
+import random
+import math
+
+
 def __init__(self, length, digit, password=''):
      self.length = length
      self.digit = digit
@@ -28,6 +32,7 @@ def  parameters():
     pass
 
 #scrambles a given string
+
 def scramble(string):
     pass
 
@@ -43,6 +48,20 @@ def caesar_cipher(self, shift: int):
         return char
 
     self.password = ''.join(shift_letter(char, shift) for char in self.password)
+
+
+
+
+def scramble(self, string):
+    toList = [chr for chr in string]
+    print(toList)
+    retString = ''
+    while len(toList) > 0:
+        rand = math.floor(random.random() * len(toList))
+        letter = toList.pop(rand)
+        retString = retString + letter
+    self.password = retString
+
 
 
 
