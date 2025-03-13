@@ -1,4 +1,7 @@
-__int__
+__init__(self, length, digit, password='')
+    self.length = length
+    self.digit = digit
+    self.password = password
 
 __str__ 
 
@@ -6,7 +9,7 @@ __str__
 void setLength(int length)
 
 #Sets if the password is funny or not
-void setFunny(boolean TF)
+void allowDigit(boolean TF)
 
 #Generate password 
 void generate()
@@ -17,4 +20,9 @@ void parameters()
 #scrambles a given string 
 void scramble(string) 
 
+#does a cesar cipher on a string
+void cesar_cipher(string)
+
+#returns the current password
+string retPassword()
 
