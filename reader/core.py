@@ -1,3 +1,6 @@
+import random
+import math
+
 def __init__(self, length, digit, password=''):
      self.length = length
      self.digit = digit
@@ -28,8 +31,16 @@ def  parameters():
     pass
 
 #scrambles a given string
-def scramble(string):
-    pass
+def scramble(self, string):
+    toList = [chr for chr in string]
+    print(toList)
+    retString = ''
+    while len(toList) > 0:
+        rand = math.floor(random.random() * len(toList))
+        letter = toList.pop(rand)
+        retString = retString + letter
+    self.password = retString
+
 
 #does a cesar cipher on a string
 def cesar_cipher(string):
