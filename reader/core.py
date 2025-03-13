@@ -1,5 +1,6 @@
 import random
 import string
+import math
 
 def __init__(self, length, digit, password=''):
      self.length = length
@@ -25,13 +26,29 @@ def generate(self):
 def parameters(self):
     return f"Length: {self.length}, Digit: {self.digit}, Password: {self.password}"
 
-#scrambles a given string
-def scramble(self, string):
-    pass
-
 #does a cesar cipher on a string
-def cesar_cipher(string):
-    pass
+def caesar_cipher(self, shift: int):
+    if not (1 <= shift <= 25):
+        raise ValueError("Shift value must be between 1 and 25.")
+
+    def shift_letter(char, shift):
+        if char.isalpha():
+            base = ord('A') if char.isupper() else ord('a')
+            return chr((ord(char) - base + shift) % 26 + base)
+        return char
+
+    self.password = ''.join(shift_letter(char, shift) for char in self.password)
+
+
+def scramble(self, string):
+    toList = [chr for chr in string]
+    print(toList)
+    retString = ''
+    while len(toList) > 0:
+        rand = math.floor(random.random() * len(toList))
+        letter = toList.pop(rand)
+        retString = retString + letter
+    self.password = retString
 
  #returns the current password
 def retPassword():
