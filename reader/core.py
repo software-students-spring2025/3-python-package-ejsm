@@ -1,28 +1,41 @@
-__init__(self, length, digit, password='')
-    self.length = length
-    self.digit = digit
-    self.password = password
+def __init__(self, length, digit, password=''):
+     self.length = length
+     self.digit = digit
+     self.password = password
 
-__str__ 
-
+def __str__ ():
+    pass
 #Sets length of the password
-void setLength(int length)
+def setLength(length):
+    pass
 
-#Sets if the password is funny or not
-void allowDigit(boolean TF)
+def allowDigit(bool):
+    pass
 
-#Generate password 
-void generate()
+def generate():
+    pass
 
-#returns all the parameters
-void parameters()
 
-#scrambles a given string 
-void scramble(string) 
+ #Sets if the password is funny or not
+def allowDigit(t):
+    pass
+
+ #Generate password
+def generate():
+    pass
+ #returns all the parameters
+def  parameters():
+    pass
+
+#scrambles a given string
+def scramble(string):
+    pass
 
 #does a cesar cipher on a string
-void cesar_cipher(string)
+def cesar_cipher(string):
+    pass
 
-#returns the current password
-string retPassword()
+ #returns the current password
+def retPassword():
+    pass
 
