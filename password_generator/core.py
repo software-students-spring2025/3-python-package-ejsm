@@ -22,6 +22,7 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
             password += list_uppercase[rand_upper[i]]
         if numbers:
             password += list_numbers[rand_number[i]]
+    return password
 
 #does a cesar cipher on a string
 def caesar_cipher(password, shift):
