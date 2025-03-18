@@ -4,25 +4,29 @@ import math
 import hashlib
 
 def generate(length, capitalize=False, numbers=False, symbols=False):
-    password = ''
-    list_lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    list_uppercase = [chr(ord(char) - 32) for char in list_lowercase]
-    list_numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-    list_symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', ':', ';', ',', '.', '/', '?', '~']
-    rand_lower = [random.randint(0, len(list_lowercase) - 1) for _ in range(5)]
+    list_lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    list_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    list_numbers = '0123456789'
+    list_symbols = '!@#$%^&*()-_+=[]{}|:;,./?~'
+    
+    all_chars = list_lowercase
+    password = [random.choice(list_lowercase)]
+    
     if capitalize:
-        rand_upper = [random.randint(0, len(list_uppercase) - 1) for _ in range(2)]
+        all_chars+=list_uppercase
+        password.append(random.choice(list_uppercase))
     if numbers:
-        rand_number = [random.randint(0, len(list_numbers) - 1) for _ in range(3)]
+        all_chars+=list_numbers
+        password.append(random.choice(list_numbers))
     if symbols:
-        rand_symbol = [random.randint(0, len(list_symbols) - 1) for _ in range(2)]
-    for i in range(length):
-        password += list_lowercase[rand_lower[i]]
-        if capitalize:
-            password += list_uppercase[rand_upper[i]]
-        if numbers:
-            password += list_numbers[rand_number[i]]
-    return password
+        all_chars+=list_symbols
+        password.append(random.choice(list_symbols))
+        
+    while len(password) < length:
+        password.append(random.choice(all_chars))
+        
+    return ''.join(password)
+
 
 #does a cesar cipher on a string
 def caesar_cipher(password, shift):
