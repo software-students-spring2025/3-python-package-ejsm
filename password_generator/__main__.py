@@ -48,6 +48,21 @@ def parser():
         help= "Get a funny password. No arguments"
     )
 
+    parser.add_argument(
+        "-b",
+        "--binarypassword",
+        dest= "binarypassword",
+        type= positive_int,
+        help= "Generate a binary password. Takes in length of string as argument."
+    )
+
+    parser.add_argument(
+        "-gh",
+        "--generatehash",
+        dest= "generatehash",
+        help= "Converts password into Hash"
+    )
+
     return parser
 
 
@@ -57,8 +72,7 @@ def main():
     try:
         args = parse.parse_args()
     except argparse.ArgumentError as exc: 
-        print("Error parsing arguments")
-        parse.error(str(exc.message))
+        print("Error parsing arguments", str(exc))
         exit(-1)
 
     if args.generate is not None:
@@ -69,9 +83,15 @@ def main():
             print(core.caesar_cipher(args.caesar_cipher[0], args.caesar_cipher[1]))
         except ValueError:
             print("Error Second Argument is not a valid integer between 1 and 25") 
+    
+    if args.generatehash:
+        print(core.generateHash(args.generatehash))
+
+    if args.binarypassword is not None:
+        print(core.binary_password(args.binarypassword))
 
     if args.scramble:
-        print(core.scramble(args.scramble()))
+        print(core.scramble(args.scramble))
 
     if args.funnyPassword:
         print(core.getFunnyPassword())
