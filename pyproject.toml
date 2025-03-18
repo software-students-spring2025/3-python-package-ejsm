@@ -1,3 +1,15 @@
 [build-system]
-requires = ["setuptools>=42"]
-build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0.0" , "wheel"]
+build-backend = "setupt
+
+[project]
+name="funny_password_generator"
+version="1.0.0"
+dependencies = ["random", "string", "math", "pytest"]
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/software-students-spring2025/3-python-package-ejsm"
+
+[project.scripts]
+realpython = "password_generator.__main__:main"

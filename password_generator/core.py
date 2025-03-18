@@ -2,29 +2,8 @@ import random
 import string
 import math
 
-def __init__(self, length, digit, password=''):
-     self.length = length
-     self.digit = digit
-     self.password = password
-
-def __str__ (self):
-    return self.password or "No password set"
-#Sets length of the password
-def setLength(self, length):
-    self.length = length
-
-def allowDigit(self,bool):
-    self.digit = bool
-
-def generate(self):
-    if self.digit:
-        self.password = ''.join(random.choices(string.ascii_letters + string.digits, k=self.length))
-    else:
-        self.password = ''.join(random.choices(string.ascii_letters, k=self.length))
-
- #returns all the parameters
-def parameters(self):
-    return f"Length: {self.length}, Digit: {self.digit}, Password: {self.password}"
+def generate(length):
+    password = ''.join(random.choices(string.ascii_letters, k=length))
 
 #does a cesar cipher on a string
 def caesar_cipher(self, shift: int):
@@ -37,24 +16,19 @@ def caesar_cipher(self, shift: int):
             return chr((ord(char) - base + shift) % 26 + base)
         return char
 
-    self.password = ''.join(shift_letter(char, shift) for char in self.password)
+    return ''.join(shift_letter(char, shift) for char in  password)
 
 
 def scramble(self, string):
     toList = [chr for chr in string]
-    print(toList)
     retString = ''
     while len(toList) > 0:
         rand = math.floor(random.random() * len(toList))
         letter = toList.pop(rand)
         retString = retString + letter
-    self.password = retString
+    return retString
 
- #returns the current password
-def retPassword():
-    pass
-
-def getFunny():
+def getFunnyPassword():
     funny_list_1 = list('123456789')
     funny_list_2= ["sleepy", "hungry", "tired", "angry", "happy", "sad", "excited", "confused", "bored", "nervous", "excited", "happy", "sad", "angry", "tired", "sleepy", "hungry", "bored", "confused", "nervous"]
     funny_list_3= ["cats", "dogs", "birds", "fish", "snakes", "cows", "horses", "sheep", "goats", "pigs", "chickens", "ducks", "turkeys", "geese", "peacocks", "parrots", "penguins", "ostriches", "eagles", "owls", "sparrows", "roosters", "hens", "peahens", "roosters"]
