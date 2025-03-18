@@ -1,12 +1,35 @@
 import random
 import string
 import math
+import hashlib
 
-def generate(length):
-    password = ''.join(random.choices(string.ascii_letters, k=length))
+def generate(length, capitalize=False, numbers=False, symbols=False):
+    list_lowercase = 'abcdefghijklmnopqrstuvwxyz'
+    list_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    list_numbers = '0123456789'
+    list_symbols = '!@#$%^&*()-_+=[]{}|:;,./?~'
+    
+    all_chars = list_lowercase
+    password = [random.choice(list_lowercase)]
+    
+    if capitalize:
+        all_chars+=list_uppercase
+        password.append(random.choice(list_uppercase))
+    if numbers:
+        all_chars+=list_numbers
+        password.append(random.choice(list_numbers))
+    if symbols:
+        all_chars+=list_symbols
+        password.append(random.choice(list_symbols))
+        
+    while len(password) < length:
+        password.append(random.choice(all_chars))
+        
+    return ''.join(password)
+
 
 #does a cesar cipher on a string
-def caesar_cipher(self, shift: int):
+def caesar_cipher(password, shift):
     if not (1 <= shift <= 25):
         raise ValueError("Shift value must be between 1 and 25.")
 
@@ -27,6 +50,15 @@ def scramble(self, string):
         letter = toList.pop(rand)
         retString = retString + letter
     return retString
+
+def binary_password(len):
+    retString = ''
+    for _ in range(len):
+        retString+= str(random.randint(0,1))
+    return retString
+
+def generateHash(password):
+    return hashlib.sha256(password.encode()).hexdigest()
 
 def getFunnyPassword():
     funny_list_1 = list('123456789')
