@@ -3,7 +3,15 @@ from password_generator import core
 import argparse
 
 def positive_int(val):
-    pass
+    try:
+        value = int(val)
+    except ValueError: 
+        raise argparse.ArgumentTypeError("Invalid input. Must be a whole number greater than 0")
+    
+    if value <= 0: 
+        raise argparse.ArgumentTypeError("Invalid Value. Must be greater than 0")
+    
+    return value
 
 def parser():
     parser = argparse.ArgumentParser(
@@ -14,13 +22,60 @@ def parser():
         "-g",
         "--generate",
         dest="generate",
-        choices=["neutral", "chuck", "all"],
-        default="neutral",
-        help="Joke category.",
+        type= positive_int,
+        help= "Generate a random password. Takes one argument: length",
     )
+
+    parser.add_argument(
+        "-c", 
+        "--caesar_cipher",
+        nargs=2,
+        help= "Decode a string based on caesar cipher. Takes two arguments: string and int (between 1 and 25) for shift",
+    )
+
+    parser.add_argument(
+        "-s", 
+        "--scramble",
+        dest= "scramble",
+        help= "Scramble a string as a password. Takes one argument: string",
+    )
+
+    parser.add_argument(
+        "-f",
+        "--getFunnyPassword",
+        dest= "funnyPassword",
+        action= "store_true",
+        help= "Get a funny password. No arguments"
+    )
+
     return parser
+
+
 def main(): 
-    pass 
+    parse = parser()
+
+    try:
+        args = parse.parse_args()
+    except argparse.ArgumentError as exc: 
+        print("Error parsing arguments")
+        parse.error(str(exc.message))
+        exit(-1)
+
+    if args.generate is not None:
+        print(core.generate(args.generate))
+
+    if args.caesar_cipher:
+        try:
+            print(core.caesar_cipher(args.caesar_cipher[0], args.caesar_cipher[1]))
+        except ValueError:
+            print("Error Second Argument is not a valid integer between 1 and 25") 
+
+    if args.scramble:
+        print(core.scramble(args.scramble()))
+
+    if args.funnyPassword:
+        print(core.getFunnyPassword())
+
 
 if __name__ == "__main__":
     main()
