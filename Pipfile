@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 setuptools = "*"
 pytest = "*"
+build = "*"
+twine = "*"
 
 [dev-packages]
 
