@@ -1,4 +1,4 @@
-![GitHub Workflow Status](https://github.com/software-students-spring2025/3-python-package-ejsm/actions/workflows/build.yaml/badge.svg)
+![GitHub Workflow Status](https://github.com/software-students-spring2025/3-python-package-ejsm/actions/workflows/build.yaml/badge.svg?branch=main)
 
 # Python Package Exercise
 
