@@ -1,15 +1,31 @@
 [build-system]
-requires = ["setuptools>=61.0.0" , "wheel"]
-build-backend = "setupt
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
-name="password_generator"
-version="1.0.0"
-dependencies = ["random", "string", "math", "pytest"]
+name = "password_generator"
+description = "Generating serious and funny passwords."
+version = "0.1.0"
+authors = [
+  { name="Jeffrey Chen", email="jc11711@nyu.edu" },
+]
 license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "package", "build", "tutorial"]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
 
 [project.urls]
-Homepage = "https://github.com/software-students-spring2025/3-python-package-ejsm"
+"Homepage" = "https://github.com/software-students-spring2025/3-python-package-ejsm"
+"Repository" = "https://github.com/software-students-spring2025/3-python-package-ejsm"
 
 [project.scripts]
-realpython = "password_generator.__main__:main"
+password_generator = "password_generator.__main__:main"
