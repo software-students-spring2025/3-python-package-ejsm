@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0.0" , "wheel"]
 build-backend = "setupt
 
 [project]
-name="funny_password_generator"
+name="password_generator"
 version="1.0.0"
 dependencies = ["random", "string", "math", "pytest"]
 license = { file = "LICENSE" }

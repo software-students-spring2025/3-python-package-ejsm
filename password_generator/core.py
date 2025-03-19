@@ -29,7 +29,12 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
 
 
 #does a cesar cipher on a string
-def caesar_cipher(word, shift: int):
+def caesar_cipher(word, shift):
+    try:
+        shift = int(shift)
+    except ValueError:
+        raise ValueError("Shift must be a int")
+    
     if not (1 <= shift <= 25):
         raise ValueError("Shift value must be between 1 and 25.")
 
