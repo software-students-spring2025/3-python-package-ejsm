@@ -54,7 +54,7 @@ def test_basic_shift_cipher():
     assert core.caesar_cipher("abc", 2) == "cde"
 
 def test_case_preservation_cipher():
-    assert core.caesar_cipher("HeLLo", 3) == "KhOOo"
+    assert core.caesar_cipher("HeLLo", 3) == "KhOOr"
 
 def test_non_alpha_chars_cipher():
     assert core.caesar_cipher("hello, world!", 5) == "mjqqt, btwqi!"
@@ -128,7 +128,7 @@ def test_generateHash():
     assert len(pass_hash) == 64
 
 def test_generateHashRandomness():
-    pass_hash = core.generateHash("password")
+    pass_hash = core.generateHash("asjdlasjdahhofhhwba7")
     pass_hash2 = core.generateHash("password")
     assert pass_hash != pass_hash2
 
@@ -137,6 +137,10 @@ def test_generate_hash_correctness():
     hash = core.generateHash(password)
     hash_t = core.generateHash(password)
     assert hash == hash_t
+
+def test_generateHas_input():
+    with pytest.raises(ValueError, match="Password must be a string"):
+        core.generateHash(123)
 
 def test_getFunnyPassword_type():
     funny_password = core.getFunnyPassword()

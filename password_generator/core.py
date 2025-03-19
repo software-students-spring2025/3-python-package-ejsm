@@ -8,10 +8,8 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
     list_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     list_numbers = '0123456789'
     list_symbols = '!@#$%^&*()-_+=[]{}|:;,./?~'
-    
     all_chars = list_lowercase
     password = [random.choice(list_lowercase)]
-    
     if capitalize:
         all_chars+=list_uppercase
         password.append(random.choice(list_uppercase))
@@ -21,10 +19,8 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
     if symbols:
         all_chars+=list_symbols
         password.append(random.choice(list_symbols))
-        
     while len(password) < length:
         password.append(random.choice(all_chars))
-        
     return ''.join(password)
 
 
@@ -34,7 +30,8 @@ def caesar_cipher(word, shift):
         shift = int(shift)
     except ValueError:
         raise ValueError("Shift must be a int")
-    
+    if shift % 1 != 0:
+        raise ValueError("Shift must be an integer")
     if not (1 <= shift <= 25):
         raise ValueError("Shift value must be between 1 and 25.")
 
@@ -63,6 +60,8 @@ def binary_password(len):
     return retString
 
 def generateHash(password):
+    if type(password) != str:
+        raise ValueError("Password must be a string")
     return hashlib.sha256(password.encode()).hexdigest()
 
 def getFunnyPassword():
