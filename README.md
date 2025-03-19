@@ -1,4 +1,4 @@
-![Python build & test](https://github.com/software-students-spring2025/3-python-package-ejsm/actions/workflows/build.yaml/badge.svg)
+![Workflow Status](https://github.com/software-students-spring2025/3-python-package-ejsm/actions/workflows/build.yaml/badge.svg)
 
 # Python Package Exercise
 
