@@ -71,9 +71,9 @@ def test_invalid_shifts_cipher():
         core.caesar_cipher("hello", 26)
 
 def test_non_integer_shift_cipher():
-    with pytest.raises(ValueError, match="Shift must be a int"):
+    with pytest.raises(ValueError, match="Shift must be an int"):
         core.caesar_cipher("hello", "three")
-    with pytest.raises(ValueError, match="Shift must be a int"):
+    with pytest.raises(ValueError, match="Shift must be an int"):
         core.caesar_cipher("hello", 3.5)
 
 def test_empty_string_cipher():
