@@ -27,12 +27,12 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
 #does a cesar cipher on a string
 def caesar_cipher(word, shift):
     try:
-        shift = int(shift)
+        tempShift = int(shift)
     except ValueError:
         raise ValueError("Shift must be a int")
     if shift % 1 != 0:
         raise ValueError("Shift must be an integer")
-    if not (1 <= shift <= 25):
+    if not (1 <= tempShift <= 25):
         raise ValueError("Shift value must be between 1 and 25.")
 
     def shift_letter(char, shift):
@@ -41,7 +41,7 @@ def caesar_cipher(word, shift):
             return chr((ord(char) - base + shift) % 26 + base)
         return char
 
-    return ''.join(shift_letter(char, shift) for char in word)
+    return ''.join(shift_letter(char, tempShift) for char in word)
 
 
 def scramble(string):
