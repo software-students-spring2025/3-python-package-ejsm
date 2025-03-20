@@ -4,20 +4,20 @@
 
 Our python package provides various password generation and manipulation functions, including a fun password generator that creates hilarious word combinations.
 
-## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/1.0.8/)
+## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/1.0.9/)
 
 ## Installation
 
 To install the package:
 
 ```bash
-pip install passgenpyNYU==1.0.8
+pip install passgenpyNYU==1.0.9
 ```
 
 To install the package into your virutal environment: 
 
 ```bash
-pipenv install passgenpyNYU==1.0.8
+pipenv install passgenpyNYU==1.0.9
 ```
 
 To activate your virtual environment: 
@@ -168,7 +168,7 @@ pipenv shell
 python3 -m pytest
 ```
 
-There are already 35 different tests cases that can found in tests/test_core.py. 
+There are already 27 different tests cases that can found in tests/test_core.py. 
 
 To make contributes, you must first create a new branch, switch to that branch, commit that branch to the git repository and make a Pull Request on git: 
 
