@@ -1,4 +1,4 @@
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 # Generate a simple 8-character password
 password = cd.generate(8)
