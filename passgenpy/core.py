@@ -37,7 +37,7 @@ def caesar_cipher(word, shift):
     if type(word) != str:
         raise ValueError("Input must be a string!")
     if type(shift) != int:
-        raise ValueError("Shift value must be an integer!")
+        raise ValueError("Shift value must be an int")
     try:
         tempShift = int(shift)
     except ValueError:
