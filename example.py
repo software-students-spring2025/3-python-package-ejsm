@@ -2,10 +2,6 @@ from passgenpyNYU import core as cd
 
 # Generate a simple 8-character password
 password = cd.generate(8)
-# Sample output:
-
-# Generate a complex 12-character password with all options
-complex_password = cd.generate(12, capitalize=True, numbers=True, symbols=True)
 # Sample output: wjtaxzvk
 
 # Use 3 shift Caesar cipher on "Hello"
