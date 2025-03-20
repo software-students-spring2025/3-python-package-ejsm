@@ -4,20 +4,20 @@
 
 Our python package provides various password generation and manipulation functions, including a fun password generator that creates hilarious word combinations.
 
-## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/1.0.9/)
+## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/1.1.0/)
 
 ## Installation
 
 To install the package:
 
 ```bash
-pip install passgenpyNYU==1.0.9
+pip install passgenpyNYU==1.1.0
 ```
 
 To install the package into your virutal environment: 
 
 ```bash
-pipenv install passgenpyNYU==1.0.9
+pipenv install passgenpyNYU==1.1.0
 ```
 
 To activate your virtual environment: 
@@ -120,7 +120,7 @@ from passgenpyNYU import core as cd
 
 funny_pass = cd.getFunnyPassword()
 ```
-### Link to Example code: [example.py](example.py)
+### Link to Example code: [example.py](https://github.com/software-students-spring2025/3-python-package-ejsm/blob/main/example.py)
 
 ## How to Contribute: 
 
