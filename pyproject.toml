@@ -31,4 +31,4 @@ dev = ["pytest"]
 "Repository" = "https://github.com/software-students-spring2025/3-python-package-ejsm"
 
 [project.scripts]
-passgenpy = "passgenpy.__main__:main"
+passgenpyNYU = "passgenpyNYU.__main__:main"
