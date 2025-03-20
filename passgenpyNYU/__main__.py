@@ -1,5 +1,5 @@
 import sys
-from passgenpy import core
+from passgenpyNYU import core
 import argparse
 
 def positive_int(val):

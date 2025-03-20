@@ -4,14 +4,14 @@
 
 Our python package provides various password generation and manipulation functions, including a fun password generator that creates hilarious word combinations.
 
-## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/)
+## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/1.0.6/)
 
 ## Installation
 
 To install the package into your virutal environment: 
 
 ```bash
-pipenv install passgenpyNYU
+pipenv install passgenpyNYU==1.0.6
 ```
 
 To activate your virtual environment: 
@@ -38,14 +38,11 @@ The above calls the generate function to generate a random password of length 10
 
 The package provides several functions for password generation and manipulation:
 
-### 1. `generate(length, capitalize=False, numbers=False, symbols=False)`
+### 1. `generate(length)`
 Generates a random password with specified characteristics.
 
 Parameters:
 - `length` (int): The desired length of the password
-- `capitalize` (bool, optional): Whether to include uppercase letters (default: False)
-- `numbers` (bool, optional): Whether to include numbers (default: False)
-- `symbols` (bool, optional): Whether to include special symbols (default: False)
 
 Example:
 ```python
@@ -53,9 +50,6 @@ from passgenpyNYU import core as cd
 
 # Generate a simple 8-character password
 password = cd.generate(8)
-
-# Generate a complex 12-character password with all options
-complex_password = cd.generate(12, capitalize=True, numbers=True, symbols=True)
 ```
 
 ### 2. `caesar_cipher(word, shift)`
