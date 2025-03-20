@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "passgenpyNYU"
 description = "Generating serious and funny passwords."
-version = "0.1.2"
+version = "1.0.2"
 authors = [
   { name="Jeffrey Chen", email="jc11711@nyu.edu" },
   { name="Shaurya Srivastava", email="ss15635@nyu.edu"},
@@ -31,4 +31,4 @@ dev = ["pytest"]
 "Repository" = "https://github.com/software-students-spring2025/3-python-package-ejsm"
 
 [project.scripts]
-passgenpy = "passgenpy.__main__:main"
+passgenpyNYU = "passgenpyNYU.__main__:main"

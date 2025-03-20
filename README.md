@@ -29,7 +29,7 @@ exit
 To run the package from the terminal:
 
 ```bash
-python3 -m passgenpyNYU -g 10
+passgenpyNYU -g 10
 ```
 
 The above calls the generate function to generate a random password of length 10. Use "python3 -m passgenpyNYU -h" to see all available terminal commands. 
