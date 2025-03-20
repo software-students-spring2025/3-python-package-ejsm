@@ -23,7 +23,7 @@ def parser():
         "--generate",
         dest="generate",
         type= positive_int,
-        help= "Generate a random password. Takes one argument: length",
+        help= "Generate a random password. Takes the following argument: length, capitalize= False, numbers= False, symbols= False",
     )
 
     parser.add_argument(
