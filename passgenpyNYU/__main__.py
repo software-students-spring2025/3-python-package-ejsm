@@ -1,5 +1,5 @@
 import sys
-from passgenpy import core
+from passgenpyNYU import core
 import argparse
 
 def positive_int(val):
@@ -80,7 +80,7 @@ def main():
 
     if args.caesar_cipher:
         try:
-            print(core.caesar_cipher(args.caesar_cipher[0], args.caesar_cipher[1]))
+            print(core.caesar_cipher(args.caesar_cipher[0], int(args.caesar_cipher[1])))
         except ValueError:
             print("Error Second Argument is not a valid integer between 1 and 25") 
     
@@ -88,7 +88,7 @@ def main():
         print(core.generateHash(args.generatehash))
 
     if args.binarypassword is not None:
-        print(core.binary_password(args.binarypassword))
+        print(core.binary_password(int(args.binarypassword)))
 
     if args.scramble:
         print(core.scramble(args.scramble))

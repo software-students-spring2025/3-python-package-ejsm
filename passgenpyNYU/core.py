@@ -2,34 +2,15 @@ import random
 import math
 import hashlib
 
-def generate(length, capitalize=False, numbers=False, symbols=False):
+def generate(length):
     '''
-    This function generates a password of a given length, 
-    with the option to include uppercase letter, numbers, and symbols
+    This function generates a password of a given length
     '''
     if type(length) != int:
         raise ValueError("Length Must be an integer!!")
-    if type(capitalize) != bool:
-        raise ValueError("Capitalize Must be a boolean!!")
-    if type(numbers) != bool:
-        raise ValueError("Numbers value must be a boolean!!")
-    if type(symbols) != bool:
-        raise ValueError("Symbols value must be a boolean!!")
     list_lowercase = 'abcdefghijklmnopqrstuvwxyz'
-    list_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    list_numbers = '0123456789'
-    list_symbols = '!@#$%^&*()-_+=[]{}|:;,./?~'
     all_chars = list_lowercase
     password = [random.choice(list_lowercase)]
-    if capitalize:
-        all_chars+=list_uppercase
-        password.append(random.choice(list_uppercase))
-    if numbers:
-        all_chars+=list_numbers
-        password.append(random.choice(list_numbers))
-    if symbols:
-        all_chars+=list_symbols
-        password.append(random.choice(list_symbols))
     while len(password) < length:
         password.append(random.choice(all_chars))
     return ''.join(password)

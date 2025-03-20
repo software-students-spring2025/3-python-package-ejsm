@@ -9,45 +9,17 @@ def test_generate():
     assert len(password) == 10
     assert any(char.isalpha() for char in password)
 
-def test_generate_upper():
-    password = core.generate(10, capitalize = True)
+def test_generate_1():
+    password = core.generate(20)
     assert isinstance(password, str)
-    assert any(char.isupper() for char in password)
+    assert len(password) == 20
+    assert any(char.isalpha() for char in password)
 
-def test_generate_number():
-    password = core.generate(10, numbers = True)
+def test_generate_2():
+    password = core.generate(45)
     assert isinstance(password, str)
-    assert any(char.isdigit() for char in password)
-
-def test_generate_symbol():
-    password = core.generate(10, symbols = True)
-    assert isinstance(password, str)
-    assert any(char in string.punctuation for char in password)
-
-def test_generate_number_cap():
-    password = core.generate(10, numbers = True, capitalize = True)
-    assert isinstance(password, str)
-    assert any(char.isdigit() for char in password)
-    assert any(char.isupper() for char in password)
-
-def test_generate_number_symbol():
-    password = core.generate(10, numbers = True, symbols = True)
-    assert isinstance(password, str)
-    assert any(char.isdigit() for char in password)
-    assert any(char in string.punctuation for char in password)
-
-def test_generate_cap_symbol():
-    password = core.generate(10, capitalize = True, symbols = True)
-    assert isinstance(password, str)
-    assert any(char.isupper() for char in password)
-    assert any(char in string.punctuation for char in password)
-
-def test_generate_number_cap_symbol():
-    password = core.generate(10, numbers = True, capitalize = True, symbols = True)
-    assert isinstance(password, str)
-    assert any(char.isdigit() for char in password)
-    assert any(char.isupper() for char in password)
-    assert any(char in string.punctuation for char in password)
+    assert len(password) == 45
+    assert any(char.isalpha() for char in password)
 
 def test_basic_shift_cipher():
     assert core.caesar_cipher("hello", 3) == "khoor"
@@ -165,18 +137,6 @@ def test_getFunnycontents():
 def test_invalid_length_generate():
     with pytest.raises(ValueError, match="Length Must be an integer!!"):
         core.generate("hello")
-
-def test_invalid_capitalize_generate():
-    with pytest.raises(ValueError, match="Capitalize Must be a boolean!!"):
-        core.generate(10, capitalize=10)
-    
-def test_invalid_numbers_generate():
-    with pytest.raises(ValueError, match="Numbers value must be a boolean!!"):
-        core.generate(10, numbers=10)
-
-def test_invalid_symbols_generate():
-    with pytest.raises(ValueError, match="Symbols value must be a boolean!!"):
-        core.generate(10, symbols=10)
 
 def test_invalid_scramble():
     with pytest.raises(ValueError, match="Input must be a string!"):
