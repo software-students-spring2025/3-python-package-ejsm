@@ -161,3 +161,27 @@ def test_getFunnycontents():
     assert any(item in funny_password for item in funny_list_2)
     assert any(item in funny_password for item in funny_list_3)
     assert any(item in funny_password for item in funny_list_4)
+
+def test_invalid_length_generate():
+    with pytest.raises(ValueError, match="Length Must be an integer!!"):
+        core.generate("hello")
+
+def test_invalid_capitalize_generate():
+    with pytest.raises(ValueError, match="Capitalize Must be a boolean!!"):
+        core.generate(10, capitalize=10)
+    
+def test_invalid_numbers_generate():
+    with pytest.raises(ValueError, match="Numbers value must be a boolean!!"):
+        core.generate(10, numbers=10)
+
+def test_invalid_symbols_generate():
+    with pytest.raises(ValueError, match="Symbols value must be a boolean!!"):
+        core.generate(10, symbols=10)
+
+def test_invalid_scramble():
+    with pytest.raises(ValueError, match="Input must be a string!"):
+        core.scramble(10)
+
+def test_invalid_binary():
+    with pytest.raises(ValueError, match= "Length input must be an integer!"):
+        core.binary_password("test")
