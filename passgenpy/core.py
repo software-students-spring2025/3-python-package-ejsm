@@ -4,6 +4,14 @@ import math
 import hashlib
 
 def generate(length, capitalize=False, numbers=False, symbols=False):
+    if type(length) != int:
+        raise ValueError("Length Must be an integer!!")
+    if type(capitalize) != bool:
+        raise ValueError("Capitalize Must be a boolean!!")
+    if type(numbers) != bool:
+        raise ValueError("Numbers value must be a boolean!!")
+    if type(symbols) != bool:
+        raise ValueError("Symbols value must be a boolean!!")
     list_lowercase = 'abcdefghijklmnopqrstuvwxyz'
     list_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     list_numbers = '0123456789'
@@ -26,6 +34,10 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
 
 #does a cesar cipher on a string
 def caesar_cipher(word, shift):
+    if type(word) != str:
+        raise ValueError("Input must be a string!")
+    if type(shift) != int:
+        raise ValueError("Shift must be an int")
     try:
         tempShift = int(shift)
     except ValueError:
@@ -34,7 +46,6 @@ def caesar_cipher(word, shift):
         raise ValueError("Shift must be an int")
     if not (1 <= tempShift <= 25):
         raise ValueError("Shift value must be between 1 and 25.")
-
     def shift_letter(char, shift):
         if char.isalpha():
             base = ord('A') if char.isupper() else ord('a')
@@ -45,6 +56,8 @@ def caesar_cipher(word, shift):
 
 
 def scramble(string):
+    if type(string) != str:
+        raise ValueError("Input must be a string!")
     toList = [chr for chr in string]
     retString = ''
     while len(toList) > 0:
@@ -53,9 +66,11 @@ def scramble(string):
         retString = retString + letter
     return retString
 
-def binary_password(len):
+def binary_password(l):
+    if type(l) != int:
+        raise ValueError("Length input must be an integer!")
     retString = ''
-    for _ in range(len):
+    for _ in range(l):
         retString+= str(random.randint(0,1))
     return retString
 
