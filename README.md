@@ -95,5 +95,3 @@ from password_generator import getFunnyPassword
 
 funny_pass = getFunnyPassword()
 ```
-
-
