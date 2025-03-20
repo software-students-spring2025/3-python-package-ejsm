@@ -4,6 +4,8 @@
 
 Our python package provides various password generation and manipulation functions, including a fun password generator that creates hilarious word combinations.
 
+## Pypi Website: [Link](https://pypi.org/project/passgenpyNYU/)
+
 ## Installation
 
 To install the package into your virutal environment: 
