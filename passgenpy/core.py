@@ -30,7 +30,7 @@ def caesar_cipher(word, shift):
         tempShift = int(shift)
     except ValueError:
         raise ValueError("Shift must be an int")
-    if shift % 1 != 0:
+    if float(shift) % 1 != 0.0:
         raise ValueError("Shift must be an int")
     if not (1 <= tempShift <= 25):
         raise ValueError("Shift value must be between 1 and 25.")
