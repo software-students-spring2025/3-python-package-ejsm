@@ -176,7 +176,10 @@ git push origin [branch name]
 
 ## Contributors: 
 
-Jeffrey Chen - [Github Link](https://github.com/JeffreyChen112) \n
-Shaurya Srivastava - [Github Link](https://github.com/shauryasr04) \n 
-Ethan Zheng - [Github Link](https://github.com/ez2146) \n
+Jeffrey Chen - [Github Link](https://github.com/JeffreyChen112)
+
+Shaurya Srivastava - [Github Link](https://github.com/shauryasr04)
+
+Ethan Zheng - [Github Link](https://github.com/ez2146)
+
 Max Meyring - [Github Link](https://github.com/maxlmeyring)
