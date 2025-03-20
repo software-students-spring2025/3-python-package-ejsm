@@ -8,8 +8,8 @@ description = "Generating serious and funny passwords."
 version = "0.1.2"
 authors = [
   { name="Jeffrey Chen", email="jc11711@nyu.edu" },
-  { name="Shaurya Srivastava", email="ss15635@nyu.edu"}
-  { name="Ethan Zheng", email="ez2146@nyu.edu"}
+  { name="Shaurya Srivastava", email="ss15635@nyu.edu"},
+  { name="Ethan Zheng", email="ez2146@nyu.edu"},
   { name="Max Meyring", email="ml7751@nyu.edu"}
 ]
 license = { file = "LICENSE" }
