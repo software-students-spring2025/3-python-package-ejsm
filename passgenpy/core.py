@@ -98,7 +98,7 @@ def generateHash(password):
 
 def getFunnyPassword():
     '''
-    Generates a funny password.
+    Generates a funny password
     '''
     funny_list_1 = list('123456789')
     funny_list_2= ["sleepy", "hungry", "tired", "angry", "happy", "sad", "excited", "confused", "bored", "nervous", "excited", "happy", "sad", "angry", "tired", "sleepy", "hungry", "bored", "confused", "nervous"]
