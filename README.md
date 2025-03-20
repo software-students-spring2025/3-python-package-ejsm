@@ -1,3 +1,5 @@
+![GitHub Workflow Status](https://github.com/software-students-spring2025/3-python-package-ejsm/actions/workflows/build.yaml/badge.svg?branch=main)
+
 # Password Generator
 
 Our python package provides various password generation and manipulation functions, including a fun password generator that creates hilarious word combinations.
