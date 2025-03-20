@@ -116,6 +116,67 @@ funny_pass = cd.getFunnyPassword()
 ```
 ### Link to Example code: [example.py](example.py)
 
+## How to Contribute: 
+
+Clone the git repository into your local repository using the following command:
+
+```bash
+git clone https://github.com/software-students-spring2025/3-python-package-ejsm.git
+```
+
+To execute any of the following steps, first navigate to the project directory: 
+
+```bash
+cd [path to project directory]
+```
+
+To set up the virtual environment, you must first download pipenv: 
+
+```bash
+pip install pipenv
+```
+
+Next, use the following command to activate the virtual environment:
+
+```bash
+pipenv shell
+```
+
+If you want to install dependencies into your virtual environment:
+
+```bash
+pipenv install [name of package]
+```
+
+To build the package, you must first activate the virtual environment and then build: 
+
+```bash
+pipenv shell
+python3 -m build
+```
+
+To test the package, you must first activate the virtual environment and then test using pytest: 
+
+```bash
+pipenv shell
+python3 -m pytest
+```
+
+There are already 35 different tests cases that can found in tests/test_core.py. 
+
+To make contributes, you must first create a new branch, switch to that branch, commit that branch to the git repository and make a Pull Request on git: 
+
+```bash
+git branch [branch name]
+git checkout [branch name]
+git add [file]
+git commit -m "commit message"
+git push origin [branch name]
+```
+
 ## Contributors: 
 
 Jeffrey Chen - [Github Link](https://github.com/JeffreyChen112)
+Shaurya Srivastava - [Github Link](https://github.com/shauryasr04)
+Ethan Zheng - [Github Link](https://github.com/ez2146)
+Max Meyring - [Github Link](https://github.com/maxlmeyring)
