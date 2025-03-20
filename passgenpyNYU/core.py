@@ -3,6 +3,10 @@ import math
 import hashlib
 
 def generate(length, capitalize=False, numbers=False, symbols=False):
+    '''
+    This function generates a password of a given length, 
+    with the option to include uppercase letter, numbers, and symbols
+    '''
     if type(length) != int:
         raise ValueError("Length Must be an integer!!")
     if type(capitalize) != bool:
@@ -33,6 +37,10 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
 
 #does a cesar cipher on a string
 def caesar_cipher(word, shift):
+    '''
+    This functions implements a caesar cipher on an inputted password, 
+    where a shift is inputted to shift the letters by a certain amount.
+    '''
     if type(word) != str:
         raise ValueError("Input must be a string!")
     if type(shift) != int:
@@ -55,6 +63,9 @@ def caesar_cipher(word, shift):
 
 
 def scramble(string):
+    '''
+    This function scrambles an inputted password and returns the scrambled version.
+    '''
     if type(string) != str:
         raise ValueError("Input must be a string!")
     toList = [chr for chr in string]
@@ -66,6 +77,9 @@ def scramble(string):
     return retString
 
 def binary_password(l):
+    '''
+    This function generates a binary password of a given length.
+    '''
     if type(l) != int:
         raise ValueError("Length input must be an integer!")
     retString = ''
@@ -74,11 +88,17 @@ def binary_password(l):
     return retString
 
 def generateHash(password):
+    '''
+    This function generates a hash of an inputted password.
+    '''
     if type(password) != str:
         raise ValueError("Password must be a string")
     return hashlib.sha256(password.encode()).hexdigest()
 
 def getFunnyPassword():
+    '''
+    This function generates a funny password. 
+    '''
     funny_list_1 = list('123456789')
     funny_list_2= ["sleepy", "hungry", "tired", "angry", "happy", "sad", "excited", "confused", "bored", "nervous", "excited", "happy", "sad", "angry", "tired", "sleepy", "hungry", "bored", "confused", "nervous"]
     funny_list_3= ["cats", "dogs", "birds", "fish", "snakes", "cows", "horses", "sheep", "goats", "pigs", "chickens", "ducks", "turkeys", "geese", "peacocks", "parrots", "penguins", "ostriches", "eagles", "owls", "sparrows", "roosters", "hens", "peahens", "roosters"]
