@@ -26,7 +26,7 @@ Parameters:
 
 Example:
 ```python
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 # Generate a simple 8-character password
 password = cd.generate(8)
@@ -44,7 +44,7 @@ Parameters:
 
 Example:
 ```python
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 encrypted = cd.caesar_cipher("Hello", 3)
 ```
@@ -57,7 +57,7 @@ Parameters:
 
 Example:
 ```python
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 scrambled = cd.scramble("Hello World")
 ```
@@ -70,7 +70,7 @@ Parameters:
 
 Example:
 ```python
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 binary = cd.binary_password(8)
 ```
@@ -83,7 +83,7 @@ Parameters:
 
 Example:
 ```python
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 hashed = cd.generateHash("myPassword123")
 ```
@@ -93,7 +93,7 @@ Generates a funny password by combining random words from predefined lists.
 
 Example:
 ```python
-from passgenpy import core as cd
+from passgenpyNYU import core as cd
 
 funny_pass = cd.getFunnyPassword()
 ```
