@@ -4,7 +4,7 @@
 
 ## Group Members
 Max Luetke Meyring - https://github.com/maxlmeyring  
-Shaurya  
+Shaurya  - https://github.com/shauryasr04  
 Ethan  
 Jeffrey  
 
