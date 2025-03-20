@@ -1,5 +1,5 @@
 import sys
-from password_generator import core
+from passgenpy import core
 import argparse
 
 def positive_int(val):
@@ -60,7 +60,7 @@ def parser():
         "-gh",
         "--generatehash",
         dest= "generatehash",
-        help= "Converts password into Hash"
+        help= "Converts password into Hash. Takes in string as arugment"
     )
 
     return parser

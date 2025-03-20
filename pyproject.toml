@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "password_generator"
+name = "passgenpy"
 description = "Generating serious and funny passwords."
-version = "0.1.0"
+version = "0.1.2"
 authors = [
   { name="Jeffrey Chen", email="jc11711@nyu.edu" },
 ]
@@ -28,4 +28,4 @@ dev = ["pytest"]
 "Repository" = "https://github.com/software-students-spring2025/3-python-package-ejsm"
 
 [project.scripts]
-password_generator = "password_generator.__main__:main"
+passgenpy = "passgenpy.__main__:main"

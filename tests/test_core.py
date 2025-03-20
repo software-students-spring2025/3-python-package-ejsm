@@ -1,7 +1,7 @@
 import pytest
 import hashlib
 import string
-import password_generator.core as core
+import passgenpy.core as core
 
 def test_generate():
     password = core.generate(10)
