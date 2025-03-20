@@ -112,4 +112,4 @@ from passgenpyNYU import core as cd
 
 funny_pass = cd.getFunnyPassword()
 ```
-### Link to Example code: [example.py]
+### Link to Example code: [example.py](example.py)
