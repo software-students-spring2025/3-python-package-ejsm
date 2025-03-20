@@ -20,6 +20,12 @@ To activate your virtual environment:
 pipenv shell
 ```
 
+To exit your virtual environment: 
+
+```bash
+exit
+```
+
 To run the package from the terminal:
 
 ```bash
