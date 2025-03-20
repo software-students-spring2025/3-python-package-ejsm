@@ -4,6 +4,10 @@ import math
 import hashlib
 
 def generate(length, capitalize=False, numbers=False, symbols=False):
+    '''
+    Generates a random password of a given length. Included are options to include uppercase characters, numbers, and symbols.
+    '''
+    
     if type(length) != int:
         raise ValueError("Length Must be an integer!!")
     if type(capitalize) != bool:
@@ -34,6 +38,10 @@ def generate(length, capitalize=False, numbers=False, symbols=False):
 
 #does a cesar cipher on a string
 def caesar_cipher(word, shift):
+    '''
+    Implements a Caesar cipher on an inputted password, with an inputted shift value.
+    '''
+
     if type(word) != str:
         raise ValueError("Input must be a string!")
     if type(shift) != int:
@@ -55,10 +63,13 @@ def caesar_cipher(word, shift):
     return ''.join(shift_letter(char, tempShift) for char in word)
 
 
-def scramble(string):
-    if type(string) != str:
+def scramble(s):
+    '''
+    Scrambles an inputted password.
+    '''
+    if type(s) != str:
         raise ValueError("Input must be a string!")
-    toList = [chr for chr in string]
+    toList = [chr for chr in s]
     retString = ''
     while len(toList) > 0:
         rand = math.floor(random.random() * len(toList))
@@ -67,6 +78,9 @@ def scramble(string):
     return retString
 
 def binary_password(l):
+    '''
+    Generates a binary password of a given length.
+    '''
     if type(l) != int:
         raise ValueError("Length input must be an integer!")
     retString = ''
@@ -75,11 +89,17 @@ def binary_password(l):
     return retString
 
 def generateHash(password):
+    '''
+    Generates a hash of an inputted password.
+    '''
     if type(password) != str:
         raise ValueError("Password must be a string")
     return hashlib.sha256(password.encode()).hexdigest()
 
 def getFunnyPassword():
+    '''
+    Generates a funny password.
+    '''
     funny_list_1 = list('123456789')
     funny_list_2= ["sleepy", "hungry", "tired", "angry", "happy", "sad", "excited", "confused", "bored", "nervous", "excited", "happy", "sad", "angry", "tired", "sleepy", "hungry", "bored", "confused", "nervous"]
     funny_list_3= ["cats", "dogs", "birds", "fish", "snakes", "cows", "horses", "sheep", "goats", "pigs", "chickens", "ducks", "turkeys", "geese", "peacocks", "parrots", "penguins", "ostriches", "eagles", "owls", "sparrows", "roosters", "hens", "peahens", "roosters"]
