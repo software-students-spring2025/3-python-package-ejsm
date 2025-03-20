@@ -8,10 +8,16 @@ Our python package provides various password generation and manipulation functio
 
 ## Installation
 
+To install the package:
+
+```bash
+pipe install passgenpyNYU==1.0.7
+```
+
 To install the package into your virutal environment: 
 
 ```bash
-pipenv install passgenpyNYU==1.0.6
+pipenv install passgenpyNYU==1.0.7
 ```
 
 To activate your virtual environment: 
