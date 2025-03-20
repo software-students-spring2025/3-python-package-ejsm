@@ -10,9 +10,9 @@ name = "testpypi"
 
 [packages]
 setuptools = "*"
-pytest = "*"
 build = "*"
 twine = "*"
+pytest = "*"
 
 [dev-packages]
 
