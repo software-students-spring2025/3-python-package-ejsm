@@ -6,12 +6,27 @@ Our python package provides various password generation and manipulation functio
 
 ## Installation
 
+To install the package into your virutal environment: 
 
 ```bash
-pipenv install funny-password-generator
+pipenv install passgenpyNYU
 ```
 
-## Features
+To activate your virtual environment: 
+
+```bash
+pipenv shell
+```
+
+To run the package from the terminal:
+
+```bash
+python3 -m passgenpyNYU -g 10
+```
+
+The above calls the generate function to generate a random password of length 10. Use "python3 -m passgenpyNYU -h" to see all available terminal commands. 
+
+## Features / Running the package in your own code
 
 The package provides several functions for password generation and manipulation:
 
