@@ -8,7 +8,7 @@ Our python package provides various password generation and manipulation functio
 
 
 ```bash
-pip install funny-password-generator
+pipenv install funny-password-generator
 ```
 
 ## Features
@@ -26,13 +26,13 @@ Parameters:
 
 Example:
 ```python
-from password_generator import generate
+from passgenpy import core as cd
 
 # Generate a simple 8-character password
-password = generate(8)
+password = cd.generate(8)
 
 # Generate a complex 12-character password with all options
-complex_password = generate(12, capitalize=True, numbers=True, symbols=True)
+complex_password = cd.generate(12, capitalize=True, numbers=True, symbols=True)
 ```
 
 ### 2. `caesar_cipher(word, shift)`
@@ -44,9 +44,9 @@ Parameters:
 
 Example:
 ```python
-from password_generator import caesar_cipher
+from passgenpy import core as cd
 
-encrypted = caesar_cipher("Hello", 3)
+encrypted = cd.caesar_cipher("Hello", 3)
 ```
 
 ### 3. `scramble(string)`
@@ -57,9 +57,9 @@ Parameters:
 
 Example:
 ```python
-from password_generator import scramble
+from passgenpy import core as cd
 
-scrambled = scramble("Hello World")
+scrambled = cd.scramble("Hello World")
 ```
 
 ### 4. `binary_password(length)`
@@ -70,9 +70,9 @@ Parameters:
 
 Example:
 ```python
-from password_generator import binary_password
+from passgenpy import core as cd
 
-binary = binary_password(8)
+binary = cd.binary_password(8)
 ```
 
 ### 5. `generateHash(password)`
@@ -83,9 +83,9 @@ Parameters:
 
 Example:
 ```python
-from password_generator import generateHash
+from passgenpy import core as cd
 
-hashed = generateHash("myPassword123")
+hashed = cd.generateHash("myPassword123")
 ```
 
 ### 6. `getFunnyPassword()`
@@ -93,7 +93,8 @@ Generates a funny password by combining random words from predefined lists.
 
 Example:
 ```python
-from password_generator import getFunnyPassword
+from passgenpy import core as cd
 
-funny_pass = getFunnyPassword()
+funny_pass = cd.getFunnyPassword()
 ```
+### Link to Example code:
